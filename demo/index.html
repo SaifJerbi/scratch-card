@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>scratch-card demo</title>
+
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../scratch-card.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic scratch-card demo</h3>
+      <demo-snippet>
+        <template>
+          <scratch-card 
+            background="images/background01.png" 
+            foreground="images/foreground01.png"
+            percent=80
+            thickness=15
+            load>
+          </scratch-card>
+        </template>
+        <script>
+          document.querySelector('scratch-card').addEventListener('scratch-finished', function (e) {
+            console.log(e); // true
+          })
+        </script>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
