@@ -2,6 +2,10 @@
 
 Scratch card  is based on HTML5, it generates canvas on the fly and is optimized for all modern browsers and has touch support for mobile devices. You can use it to make scratch cards, coupons, promotionnal game and even advertisement.
 
+## Demo
+
+Please visit the [demo](https://saifjerbi.github.io/scratch-card) and enjoy the scratch card
+
 ## Installation
 
 To install the scratch-card 
