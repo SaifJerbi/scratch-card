@@ -1,5 +1,7 @@
 # \<scratch-card\>
 
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/SaifJerbi/scratch-card)
+
 Scratch card  is based on HTML5, it generates canvas on the fly and is optimized for all modern browsers and has touch support for mobile devices. You can use it to make scratch cards, coupons, promotionnal game and even advertisement.
 
 ## Demo
