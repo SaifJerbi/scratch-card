@@ -1,0 +1,28 @@
+{
+  "name": "scratch-card",
+  "description": "scratch card using to images",
+  "main": "scratch-card.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "paper-button": "PolymerElements/paper-button#^2.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  },
+  "homepage": "https://github.com/SaifJerbi/scratch-card",
+  "_release": "1fbfa0a3ea",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "1fbfa0a3ea1e17a83f24e215c566827cae0b9de7"
+  },
+  "_source": "https://github.com/SaifJerbi/scratch-card.git",
+  "_target": "master",
+  "_originalSource": "SaifJerbi/scratch-card",
+  "_direct": true
+}
