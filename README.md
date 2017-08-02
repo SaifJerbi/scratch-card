@@ -75,4 +75,4 @@ Your application is already set up to be tested via [web-component-tester](https
 
 ## History
 
-The first release v0.0.1
+The first stable release v1.0.0
