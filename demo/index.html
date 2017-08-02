@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>scratch-card demo</title>
+
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../bower_components/iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../../bower_components/paper-button/paper-button.html">
+  <link rel="import" href="../../bower_components/paper-styles/color.html">
+  <link rel="import" href="../scratch-card.html">
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+      #container {
+        display: flex;
+      }
+
+      paper-button {
+        font-family: 'Roboto', 'Noto', sans-serif;
+        font-weight: normal;
+        font-size: 14px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      paper-button.indigo {
+        background-color: var(--paper-indigo-500);
+        color: white;
+        --paper-button-raised-keyboard-focus: {
+          background-color: var(--paper-pink-a200) !important;
+          color: white !important;
+        }
+        ;
+      }
+
+      paper-button.indigo:hover {
+        background-color: var(--paper-indigo-400);
+      }
+    </style>
+  </custom-style>
+</head>
+
+<body>
+  <div class="vertical-section-container centered">
+    <h3>Basic scratch-card demo</h3>
+    <demo-snippet>
+      <template>
+        <scratch-card background="images/background01.png" foreground="images/foreground01.png" percent=80 thickness=15 load>
+        </scratch-card>
+      </template>
+      <script>
+        document.querySelector('scratch-card').addEventListener('scratch-finished', function (e) {
+          alert("Scratch finished");
+        })
+
+        function load(exampleId){
+          var scratchCard = document.querySelector('scratch-card');
+          scratchCard.background = "images/background"+exampleId+".png";
+          scratchCard.foreground = "images/foreground"+exampleId+".png";
+          scratchCard.load = true;
+        }
+      </script>
+    </demo-snippet>
+
+    <div id="container">
+      <paper-button raised class="indigo" onClick="load('01')">Example 1</paper-button>
+      <paper-button raised class="indigo" onClick="load('02')">Example 2</paper-button>
+      <paper-button raised class="indigo" onClick="load('03')">Example 3</paper-button>
+    </div>
+  </div>
+</body>
+
+</html>
