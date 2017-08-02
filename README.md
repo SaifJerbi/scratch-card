@@ -18,6 +18,13 @@ bower install SaifJerbi/scratch-card
 
 You can use it to make scratch cards, coupons, promotionnal game and even advertisement.
 
+Once you have installed the scratch-card element, you can import it in your project using HTML import :
+
+```html
+  <link rel="import" href="bower_components/scheduler-component.html">
+```
+Once the element is imported , it's very easy to use :
+
 ```html
 
 <scratch-card 

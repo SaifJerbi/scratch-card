@@ -4,7 +4,7 @@
 <dom-module id="scratch-card">
   <template>
     <style>
-      :host {
+       :host {
         display: block;
       }
     </style>
@@ -24,59 +24,62 @@
      */
     class ScratchCard extends Polymer.Element {
       static get is() { return 'scratch-card'; }
-       static get properties() {
+      static get properties() {
         return {
-          title:{
+          title: {
             type: String,
-            value : "scratch card"
+            value: "scratch card"
           },
-          background:{
-            type: String,
-          },
-          foreground:{
+          background: {
             type: String,
           },
-          percent:{
+          foreground: {
+            type: String,
+          },
+          percent: {
             type: Number,
             value: 85
           },
-          thickness:{
+          thickness: {
             type: Number,
             value: 30
           },
-          coin:{
+          coin: {
             type: String,
           },
-          load:{
+          load: {
             type: Boolean,
-               value: false,
-               notify:true,
+            value: false,
+            notify: true,
             observer: '_doLoad'
           },
         };
       }
       _doLoad() {
-          if (this.load) {
-              this._loadScratch();
-          }
+        if (this.load) {
+          this._clear();
+          this._loadScratch();
+        }
       }
-      _loadScratch(){
-          createScratchCard({
-              "container": this.$.container,
-              "background": this.background,
-              "foreground": this.foreground,
-              "percent": this.percent,
-              "thickness": this.thickness,
-              "coin": this.coin,
-          });
-          this.load = false;
+      _loadScratch() {
+        createScratchCard({
+          "container": this.$.container,
+          "background": this.background,
+          "foreground": this.foreground,
+          "percent": this.percent,
+          "thickness": this.thickness,
+          "coin": this.coin,
+        });
+        this.load = false;
       }
-      _clear(){
+      _clear() {
+        if (typeof(this.$.container.clean) === typeof(Function)) {
           this.$.container.clean();
+        }
       }
 
-      _callback(event){
-        this.dispatchEvent(new CustomEvent('scratch-finished', {detail: event.detail,bubbles: true, composed: true}));
+      _callback(event) {
+        this.dispatchEvent(new CustomEvent('scratch-finished', { detail: event.detail, bubbles: true, composed: true }));
       }
 
       connectedCallback() {
