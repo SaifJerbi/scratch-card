@@ -8,6 +8,26 @@ Scratch card  is based on HTML5, it generates canvas on the fly and is optimized
 
 Please visit the [demo](https://saifjerbi.github.io/scratch-card) and enjoy the scratch card
 
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="scratch-card.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<scratch-card 
+            background="demo/images/background01.png" 
+            foreground="demo/images/foreground01.png"
+            percent=80
+            thickness=15
+            load>
+</scratch-card>
+```
+
 ## Installation
 
 To install the scratch-card 
